@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+    <h1>{{model.title}}</h1>
+    <h3>{{model.created_at}}</h3>
+
+    <p><strong>Commnent : ({{model.comment_set.count}}) </strong></p>
+    {% for comment in model.comment_set.all  %}
+        <p>{{ comment.content}}</p>
+    {% endfor %}
+</body>
+</html>

@@ -8,8 +8,12 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
-<body>
-    <h1>{{tittle}}</h1>
-    <h2>{{content}}</h2>
-</body>
-</html>>
+    <body>
+        <h1>{{tittle}}</h1>
+            {% for test in content %}
+                <h2><a href="{{test.id}}">{{test.title}}</a></h2>
+                <h4>{{test.content}}</h4>
+            {% endfor %}
+    </body>
+</html>
+
