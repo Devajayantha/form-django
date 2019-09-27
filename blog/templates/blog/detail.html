@@ -7,9 +7,16 @@
 <body>
     <h1>{{model.title}}</h1>
     <h3>{{model.created_at}}</h3>
-
-    <p><strong>Commnent : ({{model.comment_set.count}}) </strong></p>
-    {% for comment in model.comment_set.all  %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+            {{ field }}
+<!--            {{ field.errors }}-->
+        {% endfor %}
+        <button type="submit">SUBMIT</button>
+    </form>
+    <p><strong>Commnent : ({{model_baru.comment_set.count}}) </strong></p>
+    {% for comment in model_baru.comment_set.all  %}
         <p>{{ comment.content}}</p>
     {% endfor %}
 </body>
