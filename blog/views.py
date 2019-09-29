@@ -31,6 +31,8 @@ def formInput(request):
         form = forms.UploadForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            # print(form.picture)
+            print("upload file sukses")
             return redirect('blog-index')
     else:
         form = forms.UploadForm()

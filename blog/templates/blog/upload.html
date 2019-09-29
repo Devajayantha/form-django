@@ -8,7 +8,11 @@
     <p>FORM INPUTAN</p>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_p }}
+        <label for="id_title_pic">Subject:</label>
+            <input id="id_title_pic" type="text" name="title_pic" maxlength="100" required><br>
+        <label for="id_model_pic">Message:</label>
+            <input id="id_model_pic" type="file" name="model_pic" maxlength="100" required>
+<!--        {{ form.as_p }}-->
         <button type="submit">SUBMIT</button>
     </form>
 </body>

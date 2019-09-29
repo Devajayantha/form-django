@@ -14,4 +14,5 @@ class UploadForm(ModelForm):
     class Meta:
         model = Upload
         fields = ['title_pic','model_pic']
+        # picture =['model_pic']]
 

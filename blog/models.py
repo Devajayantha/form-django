@@ -1,5 +1,5 @@
 from django.db import models
-
+import os
 # Create your models here.
 class Post(models.Model):
     title = models.CharField(max_length=125)
@@ -18,9 +18,8 @@ class Comment(models.Model):
     created_at =models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
 
-
 class Upload(models.Model):
     title_pic = models.CharField(max_length=255)
-    model_pic = models.ImageField(upload_to = 'images/')
+    model_pic = models.ImageField(upload_to ='images/')
     def __str__(self):
         return self.title_pic
