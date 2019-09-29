@@ -5,8 +5,8 @@
     <title>{{title}}</title>
 </head>
 <body>
-    <h1>{{model.title}}</h1>
-    <h3>{{model.created_at}}</h3>
+    <h1>{{title}}</h1>
+    <h3>{{created_at}}</h3>
     <form action="" method="POST">
         {% csrf_token %}
         {% for field in form %}

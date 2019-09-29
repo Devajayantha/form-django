@@ -1,5 +1,5 @@
 from django.forms import ModelForm, HiddenInput
-from blog.models import Comment
+from blog.models import *
 
 
 class CommentForm(ModelForm):
@@ -10,4 +10,8 @@ class CommentForm(ModelForm):
         # digunakna untuk menghide inputan pada form
         widgets = {'post': HiddenInput()}
 
+class UploadForm(ModelForm):
+    class Meta:
+        model = Upload
+        fields = ['title_pic','model_pic']
 

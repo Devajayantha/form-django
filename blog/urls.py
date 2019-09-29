@@ -3,5 +3,6 @@ from blog import views
 
 urlpatterns = [
     path('',views.index, name='blog-index'),
-    path('<id>/',views.detail, name='blog-detail')
+    path('<id>/',views.detail, name='blog-detail'),
+    path('form',views.formInput, name='form-input')
 ]

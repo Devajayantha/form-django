@@ -26,3 +26,12 @@ def detail(request, id):
         'form':form
     })
 
+def formInput(request):
+    if request.method == 'POST':
+        form = forms.UploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('blog-index')
+    else:
+        form = forms.UploadForm()
+    return render(request, 'blog/upload.html', {'form': form})
