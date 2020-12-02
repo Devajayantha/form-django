@@ -5,7 +5,7 @@ jdcal==1.4
 mysql-connector==2.1.6
 mysql-connector-python==8.0.13
 openpyxl==2.5.12
-petl==1.2.0
+petl==1.6.8
 protobuf==3.6.1
 PyQt5==5.11.3
 PyQt5-sip==4.19.13
