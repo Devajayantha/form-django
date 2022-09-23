@@ -6,7 +6,7 @@ mysql-connector==2.1.6
 mysql-connector-python==8.0.13
 openpyxl==2.5.12
 petl==1.2.0
-protobuf==3.15.0
+protobuf==3.18.3
 PyQt5==5.11.3
 PyQt5-sip==4.19.13
 pyqt5-tools==5.11.2.1.3
